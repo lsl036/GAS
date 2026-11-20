@@ -1,0 +1,50 @@
+{
+  "model": "/data2/lsl_data/models/Meta-Llama-3.1-8B-Instruct",
+  "context_length": 65536,
+  "benchmark": "synthetic",
+  "tasks": ["niah_multikey_3", "niah_multivalue", "vt"],
+  "expected_samples_per_task": 50,
+  "data_dir": "benchmark/RULER/runs_e2_20260921/llama3-8b-chat-128k/synthetic_e2/65536/data",
+  "generation": {
+    "server_type": "hf",
+    "temperature": 0.0,
+    "top_k": 32,
+    "top_p": 1.0,
+    "batch_size": 1,
+    "hf_internal_seed": 43
+  },
+  "bootstrap": {
+    "iterations": 10000,
+    "seed": 20260929
+  },
+  "default_config_id": "P0-D",
+  "methods": [
+    {
+      "config_id": "P0-L",
+      "p_t": 0.80,
+      "p_g": 0.80,
+      "exception_budget": 16,
+      "config": "benchmark/RULER/e3_parameter_selection/configs/p0_l_pt080_pg080_m16.json",
+      "prediction_dir": "benchmark/RULER/e3_parameter_selection/pred/P0-L",
+      "source": "E3 new run"
+    },
+    {
+      "config_id": "P0-D",
+      "p_t": 0.85,
+      "p_g": 0.80,
+      "exception_budget": 16,
+      "config": "benchmark/RULER/e3_parameter_selection/configs/p0_d_pt085_pg080_m16.json",
+      "prediction_dir": "benchmark/RULER/e3_parameter_selection/pred/P0-D",
+      "source": "E2 A3 read-only reuse"
+    },
+    {
+      "config_id": "P0-H",
+      "p_t": 0.90,
+      "p_g": 0.80,
+      "exception_budget": 16,
+      "config": "benchmark/RULER/e3_parameter_selection/configs/p0_h_pt090_pg080_m16.json",
+      "prediction_dir": "benchmark/RULER/e3_parameter_selection/pred/P0-H",
+      "source": "E3 new run"
+    }
+  ]
+}

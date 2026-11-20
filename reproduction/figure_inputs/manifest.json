@@ -1,0 +1,129 @@
+{
+  "files": [
+    {
+      "path": "fig1-PerpvsLoadedKV/TopP_ppl_KVamp.xlsx",
+      "sha256": "05274ad4d2d03116b0e2ebb0a102922469321c057726f0febecdcf20b1b47821",
+      "bytes": 20258
+    },
+    {
+      "path": "fig1-PerpvsLoadedKV/plot_ppl_vs_loaded_kv.ipynb",
+      "sha256": "16ca0fee9477fbfdf12547a0b4316740e4774da843bde01611e9f83f604d46ff",
+      "bytes": 41430
+    },
+    {
+      "path": "fig1-PerpvsLoadedKV/论文组合图/top_k_top_p_motivation.pdf",
+      "sha256": "eff778cf8b76d8f3b37f9ed10f1acc88d86a9159b49b53532bcd97b30c8d77ad",
+      "bytes": 1365993
+    },
+    {
+      "path": "fig1-PerpvsLoadedKV/论文组合图/top_k_top_p_motivation.pptx",
+      "sha256": "bb7c02cdaca123ded799adf441a21731ca0f1da2297a8628da001e69d50baa42",
+      "bytes": 238437
+    },
+    {
+      "path": "fig2-KV-Amplification/plot_union_amp_vs_topp.ipynb",
+      "sha256": "c0b715531514dfaec33eef9f3a31a57f56076f1055325c8d5092987cc58c3c52",
+      "bytes": 42185
+    },
+    {
+      "path": "fig2-KV-Amplification/组合绘图/gqa_union_amplification_combined.pdf",
+      "sha256": "77f1b1d6610aafe100f4f5a35db842d49eb0913b78664b53e68a4967098f4a02",
+      "bytes": 148462
+    },
+    {
+      "path": "fig2-KV-Amplification/组合绘图/gqa_union_amplification_combined.pptx",
+      "sha256": "2b3e72d2ac6711fe946745c4cd038e7a7c2bbfb1c3053e0a90b42eb1a61066c7",
+      "bytes": 245795
+    },
+    {
+      "path": "fig3-GAS-Overview/GAS-Frame.pptx",
+      "sha256": "f47dfce663479763961509ef09fd35e8d912b6fd2ca3b69156577eb2f0117487",
+      "bytes": 113308
+    },
+    {
+      "path": "fig3-GAS-Overview/GAS-Frame_new.pdf",
+      "sha256": "5d4c4fabf92a6600e86c7053c7726fc186727faba535ea0b4801d7ce9c91c6d1",
+      "bytes": 1254531
+    },
+    {
+      "path": "fig4-KVvsScore/LLaMa_KV_Score.md",
+      "sha256": "d6cddf6f7b50e2d9cc0f2ef6f89ad8fee4a6c69e475ec13263f0b1e41b38dc26",
+      "bytes": 6575
+    },
+    {
+      "path": "fig4-KVvsScore/plot_llama_kv_vs_score.ipynb",
+      "sha256": "4a79dbbd69654d646ebee27dd72c182d4cf2f9c9a6d848b70a8374d7035e0a5d",
+      "bytes": 93585
+    },
+    {
+      "path": "fig5-Passkey-KV减少/plot_passkey_retained_reduced.ipynb",
+      "sha256": "aa2ecabd255f14ceba2e45b86fe037eb788fa2177f1a9525af006522107494e7",
+      "bytes": 48748
+    },
+    {
+      "path": "fig5-Passkey-KV减少/ressum.md",
+      "sha256": "2dda137eca5f09f3971403c1a04f066a3010ea76ea41bf49157483bf22b2ba05",
+      "bytes": 618
+    },
+    {
+      "path": "fig6-kernel speedup/SparseAttenKernel/GAS_Custom_Fused_Kernel_Technical_Handoff_20261114.md",
+      "sha256": "f67d53e82d14f7e4ac1b91e79677b5829edb24d2b23319b79f6acdc5e9bbd4cc",
+      "bytes": 13283
+    },
+    {
+      "path": "fig6-kernel speedup/SparseAttenKernel/Qasper_Rate08_FI_Summary.md",
+      "sha256": "557d15810f883ffa837c5750cc7e9201f1f8817a918db1493edc5020e699df85",
+      "bytes": 4477
+    },
+    {
+      "path": "fig6-kernel speedup/SparseAttenKernel/sparse_attention_kernel.ipynb",
+      "sha256": "56b64c8411e0f905af76bf64053d265b8c35f393d991b954db5d9018ff656e14",
+      "bytes": 65779
+    },
+    {
+      "path": "fig7-TPOT result/NewEnv/Qasper_Rate08_Tuned_TPOT_Projection.md",
+      "sha256": "c423d0bda77244fb01baca40559a8fe80f4937956a672ded166dd3e80bc89639",
+      "bytes": 6301
+    },
+    {
+      "path": "fig7-TPOT result/NewEnv/TPOT_Speedup.ipynb",
+      "sha256": "aa2052646b3b90fbc212666488d1ad94f15651b8539a1b2550467816788a72eb",
+      "bytes": 71088
+    },
+    {
+      "path": "fig8-TimeBreakdown/README.md",
+      "sha256": "f1acb1344777f46dbeae450899a8be85b7c8f00e76d63425d1cfb10273de433a",
+      "bytes": 1567
+    },
+    {
+      "path": "fig8-TimeBreakdown/TimeBreakdown.ipynb",
+      "sha256": "4c948052f41986821be0618976d06da606d6e97465e7c6a082b99b6f45db62bb",
+      "bytes": 54777
+    },
+    {
+      "path": "fig8-TimeBreakdown/bk_tested/TimeBreakdown.ipynb",
+      "sha256": "a17acd4e0d773334ea919e7b6d99feb980fd0b12a5f45babdc641100cb761eb8",
+      "bytes": 56907
+    },
+    {
+      "path": "fig8-TimeBreakdown/bk_tested/time_breakdown_data.csv",
+      "sha256": "b44a9b0a8175952b5e4c0de46b7202e63f99be3bdb2a6bfc076f7785cdb3a3b6",
+      "bytes": 1469
+    },
+    {
+      "path": "fig8-TimeBreakdown/bk_tested/实验记录.md",
+      "sha256": "9ed7d522b5c3e88f1e60c9827cd0fe03d4443b58ab12b8d1282f303e92b46a66",
+      "bytes": 4820
+    },
+    {
+      "path": "fig8-TimeBreakdown/time_breakdown_data.csv",
+      "sha256": "0133b38358f180dba7676755736ba13e4125936aa0f39c9802c5adb5ba08db50",
+      "bytes": 1936
+    },
+    {
+      "path": "tab2-Accuracy/dataTest.md",
+      "sha256": "50a41085036d3e5c6352c8de64f44cb8441216292db3a43089c3c4a4f9776ac5",
+      "bytes": 1768
+    }
+  ]
+}

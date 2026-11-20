@@ -1,0 +1,11 @@
+{
+  "module": "/data/tmp/torch_ext_e6_stream_adapters/e6_quest_nopart_fixed/e6_quest_nopart_fixed.so",
+  "module_sha256": "260626136ddecd7f995d417b5572f16db269e31fe21698799bfab39b3764363d",
+  "sources": {
+    "/data/home/lsl/SparseAtt/Twilight_Ours/benchmark/efficiency/e6_official_decode_binding.cu": "8dce4e4b3aa94fab79976c3b9e986a5bb1c091c875b7593801f9256a2b31bcdf",
+    "/data/home/lsl/SparseAtt/Twilight_Ours/benchmark/results_efficiency/e6_stream_adapters_v2/quest_stream_approx_attn.cu": "9476e4ad807bf6da988f19c11c854c5cfa986a7f505f01462f6a55425d9713a4",
+    "/data/home/lsl/SparseAtt/Twilight_Ours/benchmark/efficiency/quest_nopart_overlay/decode/decode_page.cuh": "ea84facc88180815bab7b9c70161b119077f145f223c52ba9b29a624e92f4324",
+    "/data/home/lsl/SparseAtt/Twilight_Ours/benchmark/efficiency/quest_nopart_overlay/decode/decode_attn.cuh": "0ee18bcb9eaa7133492de7577d3522720ee16879d26101008a1ecd437855da6c"
+  },
+  "change": "current-stream wrapper plus isolated non-partition history/last-page correction; not unmodified official kernel"
+}

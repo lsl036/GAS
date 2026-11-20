@@ -1,0 +1,13 @@
+method,n_tasks,n_samples,macro_score,reused
+full,13,650,48.83757771151862,false
+quest_4pct,13,650,38.27203351301026,false
+quest_8pct,13,650,43.118863995989855,false
+prob_sum,13,650,49.7656337378108,false
+quest_twi,13,650,49.58784139411897,true
+group_max,13,650,48.82188144209544,true
+full_twi,13,0,,false
+full_gas,13,0,,false
+ds_4pct,13,650,49.264389494099035,false
+ds_8pct,13,650,49.471771835582366,false
+ds_twi,13,650,49.43746634479488,false
+ds_gas,13,650,49.27359182505105,false

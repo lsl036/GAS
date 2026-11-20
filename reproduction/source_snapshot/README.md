@@ -1,0 +1,125 @@
+<div align="center">
+<img src="figures/logo.png" height="100px">
+<h1>Twilight: Adaptive Attention Sparsity with Hierarchical Top-$p$ Pruning</h1>
+</div>
+<div align="center">
+<b><a href="https://chaofanlin.com/">Chaofan Lin</a></b>,
+<b><a href="https://jiamingtang.me/">Jiaming Tang</a></b>,
+<b><a href="https://andy-yang-1.github.io/">Shuo Yang</a></b>,
+<b><a href="https://github.com/WANGHanshuo1220">Hanshuo Wang</a></b>,
+<b><a href="https://github.com/tang-t21">Tian Tang</a></b>,
+<b><a href="https://criust.github.io/">Boyu Tian</a></b>,<br>
+<b><a href="https://people.eecs.berkeley.edu/~istoica/">Ion Stoica</a></b>,
+<b><a href="https://hanlab.mit.edu/songhan/">Song Han</a></b>,
+<b><a href="https://people.iiis.tsinghua.edu.cn/~gaomy/index.html">Mingyu Gao</a></b>
+</div>
+<div align="center">
+Tsinghua University, MIT, UC Berkeley
+</div>
+
+<div align="center">
+<a href="https://arxiv.org/abs/2502.02770">[Paper]</a> | 
+<a href="https://github.com/tsinghua-ideal/Twilight">[Code]</a> | 
+<a href="assets/Twilight-NIPS25.pdf">[Slide]</a> | 
+<a href="assets/Twilight-Poster.pdf">[Poster]</a> | 
+<a href="">[Flash-TopK-Attention (Stay Tuned)]</a><br><br>
+</div>
+
+![teaser](figures/teaser.png)
+
+Twilight is a composable optimizer to accelerate **any existing top-$k$ sparse decoding methods** through hierarchical top-$p$ pruning, making them efficient and **budget-adaptive**.
+
+## Key Design: Optimizing Current Algorithm via Hierarchical Top-p Pruning
+
+Traditional top-$k$ based sparse attention can be unified into a **Select-then-SpAttn** architecture, where:
+- **Selector**: usually consists of a fast $q \cdot k$ approximation and a `topk` operator to filter out the indices.
+- **Sparse Attention**: a.k.a Paged Attention, which takes the selected indices as inputs and then calculates the attention **only on** these tokens.
+
+However, they usually use a fixed budget $k$ of how many tokens to use in their computations. Twilight hacks into the unified architecture by adding a **Pruner** component right after the Selector called **Select-then-Prune** architecture in our paper. 
+
+By first selecting tokens using a conservative budget using the basic algorithms' Selector and then purning them using top-$p$ pruner, Twilight optimize them with adaptive budget decision capabilities without sacrificing accuracy.
+
+![arch](figures/arch.png)
+
+## Installation
+
+```bash
+conda create -n twi python=3.10
+conda activate twi
+pip install -r requirements.txt
+pip install -e .
+```
+
+Note: install `flash-attn` may take several minutes.
+
+## Evaluation
+
+Twilight accelerates SOTA methods like [Quest](https://github.com/mit-han-lab/Quest), [Double Sparse](https://github.com/andy-yang-1/DoubleSparse/tree/main) with nearly zero accuracy loss.
+| Methods | Longbench (w/o Twilight) | Longbench (w/ Twilight) | Avg. Budget After Pruned |
+| ------- | ----------- |----------- |----------- |
+| Full (32k)   |  36.78      | **38.52(+4.7\%)** | 146 |
+| Quest (8192 budget)  | 37.10 | **38.04(+2.5\%)** | 131 |
+| DS (8192 budget)     | 36.62 | **38.71(+5.7\%)**| 126 |
+
+![eva1](figures/kernels.png)
+
+\* Results on Longchat-7B-v1.5-32k
+
+### Accuracy Evaluation
+
+We implements a Python version of Twilight and some other existing top-$k$ methods for accuracy-only evaluation. To bench different methods, we use a unified configuration format. 
+
+We recommend run the following commands under the `benchmark/` directory and the results will be dumped as `result_<benchmark_name>/<model_name>/xxx`.
+
+> The configuration files are put under `benchmark/configs/`. Note that for [Double Sparse](https://github.com/andy-yang-1/DoubleSparse/tree/main), you should replace the config path with your own path. Please refer to DS's repo for details.
+
+#### Passkey
+
+```bash
+# Modify MODEL, MODEL_PATH and algo_config_path in scripts/run_passkey.sh
+CUDA_VISIBLE_DEVICES=0 bash scripts/run_passkey.sh
+```
+
+#### Longbench
+
+```bash
+# Modify MODEL and MODEL_PATH in scripts/run_longbench.sh
+CUDA_VISIBLE_DEVICES=0 bash scripts/run_longbench.sh configs/config_quest_1024.json
+```
+
+#### RULER
+
+```bash
+# Modify MODEL and MODEL_PATH in RULER/scripts/run.sh
+cd RULER/scripts
+CUDA_VISIBLE_DEVICES=0 bash run.sh configs/config_quest_1024.json quest_1024 synthetic
+```
+
+### Efficiency Evaluation
+
+We have organized an implementation of [Flash-TopK-Attention](https://github.com/tsinghua-ideal/flash-topk-attention/) using languages such as [FlashInfer(CUDA)](https://github.com/flashinfer-ai/flashinfer), [Triton](https://github.com/triton-lang/triton), and [TileLang](https://github.com/tile-ai/tilelang/) for the existing top-$k$ algorithm. Please follow the document to install it.
+
+#### Bench quantized GEMV
+
+```bash
+cd benchmark/efficiency
+python3 bench_gemv.py
+```
+
+
+
+## Citation
+
+If you find Twilight useful or relevant to your project and research, please kindly cite our paper:
+```bibtex
+@article{lin2025twilight,
+  title={Twilight: Adaptive Attention Sparsity with Hierarchical Top-$ p $ Pruning},
+  author={Lin, Chaofan and Tang, Jiaming and Yang, Shuo and Wang, Hanshuo and Tang, Tian and Tian, Boyu and Stoica, Ion and Han, Song and Gao, Mingyu},
+  journal={arXiv preprint arXiv:2502.02770},
+  year={2025}
+}
+```
+
+## Acknowledgement
+
+We learned the designs/optimizations and reused code from the following projects: [FlashInfer](https://github.com/flashinfer-ai/flashinfer), [Quest](https://github.com/mit-han-lab/Quest), [Atom](https://github.com/efeslab/Atom), [FasterTransformer](https://github.com/NVIDIA/FasterTransformer), [QServe](https://github.com/mit-han-lab/omniserve). We also thank reserach projects like [DuoAttention](https://github.com/mit-han-lab/duo-attention), [PyramidKV](https://github.com/Zefan-Cai/KVCache-Factory), [Ada-KV](https://github.com/FFY0/AdaKV) and [MagicPIG](https://github.com/Infini-AI-Lab/MagicPiG) for bringing the ideas of dynamic budgets across different levels and breaking the limitations of top-$k$ attention.

@@ -1,0 +1,33 @@
+{
+  "model": "llama3-8b-chat-128k",
+  "context_length": 32768,
+  "calibration_samples_per_task": 10,
+  "formal_samples_per_task": 50,
+  "target_loaded_kv": 1296.7199358249848,
+  "selections": {
+    "quest_cal": {
+      "method_id": "quest_rate_0p0025",
+      "family": "quest",
+      "selector": "quest",
+      "score": 23.9,
+      "loaded_kv": 1311.730820249512,
+      "config": "/data/home/lsl/SparseAtt/Twilight_Ours/benchmark/RULER/fig4a_llama31/configs/quest_rate_0p0025.json"
+    },
+    "ds_cal": {
+      "method_id": "ds_rate_0p0025",
+      "family": "ds",
+      "selector": "ds",
+      "score": 40.8,
+      "loaded_kv": 1753.184282310976,
+      "config": "/data/home/lsl/SparseAtt/Twilight_Ours/benchmark/RULER/fig4a_llama31/configs/ds_rate_0p0025.json"
+    },
+    "twi_cal": {
+      "method_id": "twi_k_2048",
+      "family": "twilight",
+      "selector": "quest",
+      "score": 48.7,
+      "loaded_kv": 1720.7394981870252,
+      "config": "/data/home/lsl/SparseAtt/Twilight_Ours/benchmark/RULER/fig4a_llama31/configs/twi_k_2048.json"
+    }
+  }
+}

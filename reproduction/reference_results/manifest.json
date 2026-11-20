@@ -1,0 +1,99 @@
+{
+  "files": [
+    {
+      "path": "benchmark/RULER/fig4a_llama31/fig4a_summary.csv",
+      "sha256": "433a61d62bccfb3e49c68e4448bce5377e95a2a89e066cec963f3903de49b127",
+      "bytes": 2156
+    },
+    {
+      "path": "benchmark/RULER/fig4a_llama31/Fig4a_Plot_Data.md",
+      "sha256": "36bd09957e44ef57b55d24a625a5b1f7d301a399178f175337a1a704c8d1b0f4",
+      "bytes": 1194
+    },
+    {
+      "path": "benchmark/RULER/fig4a_llama31/calibration.csv",
+      "sha256": "dd792013ff93905f6d3d7a69e4e0d980d0ee77307448d4b247f395f042a47f50",
+      "bytes": 4612
+    },
+    {
+      "path": "benchmark/RULER/fig4a_llama31/frozen_selection.json",
+      "sha256": "196a577bb0e7a220203329336f879c3ee56914f214ff76ed5bc569d87f7fcd06",
+      "bytes": 1057
+    },
+    {
+      "path": "benchmark/RULER/fig4a_baselines/results/formal_paired_curve_expanded.csv",
+      "sha256": "d7a1126122840763e7e0bf57966366f188d7d9282b3786ad74974b39c4d2df28",
+      "bytes": 3160
+    },
+    {
+      "path": "benchmark/results_passkey_ours/fig4b_generality_8192/fig4b_summary.csv",
+      "sha256": "96d9f36abd910247b4c27177a2a74877791ec3453feb8021768562b343eb9e70",
+      "bytes": 1205
+    },
+    {
+      "path": "benchmark/results_efficiency/qasper_rate08_grouped_summary_20261113/summary.csv",
+      "sha256": "9b0c68f9e1640f9e1f0ba5fca0b9bba3ebe39d260e268408e233dda8ae8a30eb",
+      "bytes": 13450
+    },
+    {
+      "path": "benchmark/results_efficiency/qasper_rate08_tpot_projection_20261113/projection.csv",
+      "sha256": "523db3389c8fdcf83bc2db9d177eabe53a47d64767a022d5467564139dafb691",
+      "bytes": 46793
+    },
+    {
+      "path": "benchmark/results_efficiency/qasper_rate08_tpot_tuned_projection_20261113/projection.csv",
+      "sha256": "2f8218b1e66a787640a0d7fc763cbe26010d115c9b26a260528a6725f92f7856",
+      "bytes": 96896
+    },
+    {
+      "path": "benchmark/results_efficiency/qasper_rate08_tpot_tuned_projection_20261113/dense_audit.csv",
+      "sha256": "ddd3d33dcbf565933e759cd3501c263fb31950d1361c6778970a2dddb272fd03",
+      "bytes": 9558
+    },
+    {
+      "path": "benchmark/results_efficiency/qasper_rate08_tpot_tuned_projection_20261113/gas_custom_projection.csv",
+      "sha256": "84dd8d278b988858cf3a07581200e540e69b04b41a3b3ceb8f9af568ea7a598e",
+      "bytes": 5141
+    },
+    {
+      "path": "benchmark/results_efficiency/qasper_gas_author_20261114/summary.csv",
+      "sha256": "dcc1edb488dfcb3be7a9e8051335c14ea36ebeadb0965e8bb5b39228c891f44c",
+      "bytes": 1513
+    },
+    {
+      "path": "benchmark/results_efficiency/qasper_gas_paired_20261114/summary.csv",
+      "sha256": "37fc701113fccfd8272aaf6a97887da3c1b6d1e4991666cdce0c19538ac6e070",
+      "bytes": 1594
+    },
+    {
+      "path": "benchmark/results_efficiency/e7_estimated_tpot/VALIDITY_NOTICE.md",
+      "sha256": "654ed531e5e92c31c8cc41939a25343cf9e9b1face4c6ee23b84cb8e7f74e01d",
+      "bytes": 4362
+    },
+    {
+      "path": "benchmark/results_efficiency/e7_v1_simplified_projection/E7_v1_frontend_inclusive.csv",
+      "sha256": "b07ce3c1b5b191d9fe19ace0e50cc4dc47f9106faff7ff1ff364e9ee67bcb427",
+      "bytes": 9658
+    },
+    {
+      "path": "benchmark/results_longbench/e5_longbench_completion/E5_LongBench_Task_Scores.csv",
+      "sha256": "9e154e64c35ddc658f1d20684ec47530013ed0ae33dc6a45209a76d680e988c9",
+      "bytes": 15539
+    },
+    {
+      "path": "benchmark/results_longbench/e5_longbench_completion/E5_LongBench_Summary.csv",
+      "sha256": "ea09dbe056941af1f865f7da0cf2a9cd8d7f2c1a7c615701f2b8e9342e4fcad6",
+      "bytes": 614
+    },
+    {
+      "path": "benchmark/results_longbench/e5_selector_matrix_ds50/E5_Selector_Matrix_Task_Scores.csv",
+      "sha256": "27b3e29216dbd3b401a7e95f36957a3b8110797825972740b41e1c9e73cee2f9",
+      "bytes": 29749
+    },
+    {
+      "path": "benchmark/results_longbench/e5_selector_matrix_ds50/E5_Selector_Matrix_Summary.csv",
+      "sha256": "48b818faeacf58d4fcab77963643e05040d4455e85e94e2e3bb14d3cfe52be72",
+      "bytes": 495
+    }
+  ]
+}

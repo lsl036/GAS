@@ -1,0 +1,11 @@
+{
+  "module": "/data/tmp/torch_ext_e6_stream_adapters/e6_less_nopart_fixed/e6_less_nopart_fixed.so",
+  "module_sha256": "e6e0328fdc4acd11b554dc941d49e7e713cb39a966526aa84e3d03734b9ad178",
+  "sources": {
+    "/data/home/lsl/SparseAtt/Twilight_Ours/benchmark/efficiency/e6_official_decode_binding.cu": "8dce4e4b3aa94fab79976c3b9e986a5bb1c091c875b7593801f9256a2b31bcdf",
+    "/data/home/lsl/SparseAtt/Twilight_Ours/benchmark/results_efficiency/e6_stream_adapters_v2/less_stream_approx_attn.cu": "031d4e911c030e10270d8879e378ecd4a4bba734e3dbe9b3a3a89cf952dc5b46",
+    "/data/home/lsl/SparseAtt/Twilight_Ours/benchmark/efficiency/less_nopart_overlay/decode/decode_page.cuh": "0b8692f6234cfec900fabbb3d524a93ba34414ac49cea7f47e12642568d019ab",
+    "/data/home/lsl/SparseAtt/Twilight_Ours/benchmark/efficiency/less_nopart_overlay/decode/decode_attn.cuh": "7036d45fb5a6e9141b7dc5a196ec451fa3fb1e8e05509c85a5a9ed977f0296cd"
+  },
+  "change": "current-stream wrapper plus isolated non-partition history/last-page correction; not unmodified official kernel"
+}
